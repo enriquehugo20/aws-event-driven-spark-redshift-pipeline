@@ -1,0 +1,17 @@
+-- Script de creación de la tabla final en Amazon Redshift
+
+CREATE TABLE IF NOT EXISTS public.online_retail_sales (
+    invoice_no     VARCHAR(20),
+    stock_code     VARCHAR(20),
+    description    VARCHAR(255),
+    quantity       INTEGER,
+    invoice_date   TIMESTAMP,
+    unit_price     NUMERIC(10, 2),
+    customer_id    INTEGER,
+    country        VARCHAR(100),
+    total_amount   NUMERIC(12, 2),
+    load_timestamp TIMESTAMP
+)
+DISTSTYLE KEY
+DISTKEY (customer_id)
+SORTKEY (invoice_date);

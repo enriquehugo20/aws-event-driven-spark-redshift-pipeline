@@ -1,0 +1,22 @@
+# Entornos virtuales de Python
+.venv/
+env/
+venv/
+ENV/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configuración y credenciales locales
+.env
+.aws/
+*.pem
+*.json
+
+# Archivos de sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
